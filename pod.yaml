@@ -1,0 +1,15 @@
+ apiVersion : apps/v1
+ kind : pod
+metadata :
+    name : nginx
+lables: 
+    role : myrole
+spec:
+        shareProcessNamespace : true
+
+        containers :
+                - image: nginx:1.16
+                   name: nginx 
+           ports:
+             - name: nginx
+               containerPort: 80
